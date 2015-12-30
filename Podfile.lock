@@ -1,0 +1,29 @@
+PODS:
+  - AFNetworking (3.0.3):
+    - AFNetworking/NSURLSession (= 3.0.3)
+    - AFNetworking/Reachability (= 3.0.3)
+    - AFNetworking/Security (= 3.0.3)
+    - AFNetworking/Serialization (= 3.0.3)
+    - AFNetworking/UIKit (= 3.0.3)
+  - AFNetworking/NSURLSession (3.0.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.3)
+  - AFNetworking/Security (3.0.3)
+  - AFNetworking/Serialization (3.0.3)
+  - AFNetworking/UIKit (3.0.3):
+    - AFNetworking/NSURLSession
+  - Mantle (2.0.6):
+    - Mantle/extobjc (= 2.0.6)
+  - Mantle/extobjc (2.0.6)
+
+DEPENDENCIES:
+  - AFNetworking
+  - Mantle
+
+SPEC CHECKSUMS:
+  AFNetworking: ba06eb9f27de596808c0acc09e1c920cb1d17ab4
+  Mantle: 299966b00759634931699f69cb6a30b9239b944d
+
+COCOAPODS: 0.39.0

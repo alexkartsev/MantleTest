@@ -13,9 +13,15 @@
 		117D10B41C32F5D60082295E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117D10B31C32F5D60082295E /* Assets.xcassets */; };
 		117D10B71C32F5D60082295E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117D10B51C32F5D60082295E /* LaunchScreen.storyboard */; };
 		117D10C31C32F70E0082295E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D10C21C32F70E0082295E /* MainViewController.m */; };
+		11EC36311C33D4E100106F47 /* ParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC36301C33D4E100106F47 /* ParseManager.m */; };
+		11EC36351C33D98600106F47 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC36341C33D98600106F47 /* User.m */; };
+		11EC36381C33DA0E00106F47 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC36371C33DA0E00106F47 /* Photo.m */; };
+		11EC363B1C3401E800106F47 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC363A1C3401E800106F47 /* TableViewController.m */; };
+		9195E2FEBBD624EFEFA11125 /* libPods-MantleTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D15232915EDEF5566270CD /* libPods-MantleTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05D15232915EDEF5566270CD /* libPods-MantleTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MantleTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		117D10A41C32F5D60082295E /* MantleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MantleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117D10A81C32F5D60082295E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		117D10AA1C32F5D60082295E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +32,16 @@
 		117D10B81C32F5D60082295E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		117D10C11C32F70E0082295E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		117D10C21C32F70E0082295E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		11EC362F1C33D4E100106F47 /* ParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseManager.h; path = Managers/ParseManager.h; sourceTree = "<group>"; };
+		11EC36301C33D4E100106F47 /* ParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseManager.m; path = Managers/ParseManager.m; sourceTree = "<group>"; };
+		11EC36331C33D98600106F47 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Classes/User.h; sourceTree = "<group>"; };
+		11EC36341C33D98600106F47 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Classes/User.m; sourceTree = "<group>"; };
+		11EC36361C33DA0E00106F47 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Classes/Photo.h; sourceTree = "<group>"; };
+		11EC36371C33DA0E00106F47 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Classes/Photo.m; sourceTree = "<group>"; };
+		11EC36391C3401E800106F47 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		11EC363A1C3401E800106F47 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		12AA7D39CD516F6DE2AFD399 /* Pods-MantleTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MantleTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MantleTest/Pods-MantleTest.release.xcconfig"; sourceTree = "<group>"; };
+		B0CD30A27D8CB9D9FA4AC324 /* Pods-MantleTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MantleTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MantleTest/Pods-MantleTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9195E2FEBBD624EFEFA11125 /* libPods-MantleTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +61,8 @@
 			children = (
 				117D10A61C32F5D60082295E /* MantleTest */,
 				117D10A51C32F5D60082295E /* Products */,
+				EB9F70B8A388402FAE62FDA3 /* Pods */,
+				E7DD19E80B9C856AC649A782 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +77,14 @@
 		117D10A61C32F5D60082295E /* MantleTest */ = {
 			isa = PBXGroup;
 			children = (
+				11EC362E1C33D4B400106F47 /* Managers */,
+				11EC36321C33D94600106F47 /* Classes */,
 				117D10AA1C32F5D60082295E /* AppDelegate.h */,
 				117D10AB1C32F5D60082295E /* AppDelegate.m */,
 				117D10C11C32F70E0082295E /* MainViewController.h */,
 				117D10C21C32F70E0082295E /* MainViewController.m */,
+				11EC36391C3401E800106F47 /* TableViewController.h */,
+				11EC363A1C3401E800106F47 /* TableViewController.m */,
 				117D10B01C32F5D60082295E /* Main.storyboard */,
 				117D10B31C32F5D60082295E /* Assets.xcassets */,
 				117D10B51C32F5D60082295E /* LaunchScreen.storyboard */,
@@ -79,6 +102,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		11EC362E1C33D4B400106F47 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				11EC362F1C33D4E100106F47 /* ParseManager.h */,
+				11EC36301C33D4E100106F47 /* ParseManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		11EC36321C33D94600106F47 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				11EC36331C33D98600106F47 /* User.h */,
+				11EC36341C33D98600106F47 /* User.m */,
+				11EC36361C33DA0E00106F47 /* Photo.h */,
+				11EC36371C33DA0E00106F47 /* Photo.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		E7DD19E80B9C856AC649A782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05D15232915EDEF5566270CD /* libPods-MantleTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB9F70B8A388402FAE62FDA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0CD30A27D8CB9D9FA4AC324 /* Pods-MantleTest.debug.xcconfig */,
+				12AA7D39CD516F6DE2AFD399 /* Pods-MantleTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 117D10BB1C32F5D60082295E /* Build configuration list for PBXNativeTarget "MantleTest" */;
 			buildPhases = (
+				BF3DEFF248BA76EA21CAA684 /* Check Pods Manifest.lock */,
 				117D10A01C32F5D60082295E /* Sources */,
 				117D10A11C32F5D60082295E /* Frameworks */,
 				117D10A21C32F5D60082295E /* Resources */,
+				3C1A2641CC0C9166BA9B22A7 /* Embed Pods Frameworks */,
+				EAB4D112953B745FF711EA1F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,14 +207,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C1A2641CC0C9166BA9B22A7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MantleTest/Pods-MantleTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF3DEFF248BA76EA21CAA684 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EAB4D112953B745FF711EA1F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MantleTest/Pods-MantleTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		117D10A01C32F5D60082295E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11EC36381C33DA0E00106F47 /* Photo.m in Sources */,
+				11EC36351C33D98600106F47 /* User.m in Sources */,
 				117D10AC1C32F5D60082295E /* AppDelegate.m in Sources */,
 				117D10C31C32F70E0082295E /* MainViewController.m in Sources */,
 				117D10A91C32F5D60082295E /* main.m in Sources */,
+				11EC363B1C3401E800106F47 /* TableViewController.m in Sources */,
+				11EC36311C33D4E100106F47 /* ParseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +376,7 @@
 		};
 		117D10BC1C32F5D60082295E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0CD30A27D8CB9D9FA4AC324 /* Pods-MantleTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MantleTest/Info.plist;
@@ -272,6 +388,7 @@
 		};
 		117D10BD1C32F5D60082295E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12AA7D39CD516F6DE2AFD399 /* Pods-MantleTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MantleTest/Info.plist;
@@ -300,6 +417,7 @@
 				117D10BD1C32F5D60082295E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
