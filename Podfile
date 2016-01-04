@@ -6,7 +6,8 @@
 target 'MantleTest' do
 
 pod 'AFNetworking'
-pod ‘Mantle’
+pod 'MBProgressHUD'
+pod 'Mantle'
 
 end
 

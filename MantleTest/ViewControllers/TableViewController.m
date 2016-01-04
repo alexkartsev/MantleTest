@@ -11,12 +11,15 @@
 #import "Photo.h"
 #import <AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
+#import "DetailViewController.h"
 
 @interface TableViewController ()
 
 @end
 
 @implementation TableViewController
+
+static NSString *cellIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,7 +36,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         if (self.isPhotos) {
@@ -51,16 +53,16 @@
     if (self.isPhotos) {
         Photo *photo = [self.arrayOfObjects objectAtIndex:indexPath.row];
         cell.textLabel.text = photo.title;
-        //[cell.imageView setImageWithURL:photo.imageURL placeholderImage:nil];
         NSURLRequest *request = [NSURLRequest requestWithURL:photo.imageURL];
         __weak typeof(UITableViewCell) *weakCell = cell;
         [cell.imageView setImageWithURLRequest:request
-    placeholderImage:nil
-    success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
-        [weakCell.imageView setImage:image];
-    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
-        NSLog(@"ERROR of loading image");
-    }];
+                              placeholderImage:nil
+                                       success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+                                           weakCell.imageView.image = image;
+                                           [weakCell setNeedsLayout];
+        }                              failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+                                            NSLog(@"ERROR of loading image for cell");
+        }];
     }
     else {
         User *user = [self.arrayOfObjects objectAtIndex:indexPath.row];
@@ -68,6 +70,21 @@
         cell.detailTextLabel.text = user.email;
     }
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [cell.imageView cancelImageDownloadTask];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DetailViewController *vc = [[DetailViewController alloc] init];
+    if (self.isPhotos) {
+        vc.photo = [self.arrayOfObjects objectAtIndex:indexPath.row];
+    }
+    else {
+        vc.user = [self.arrayOfObjects objectAtIndex:indexPath.row];
+    }
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

@@ -9,11 +9,13 @@
 #import "MainViewController.h"
 #import "ParseManager.h"
 #import "TableViewController.h"
+#import <MBProgressHUD.h>
 
 @interface MainViewController ()
 
 @property (strong, nonatomic) UIButton *userButton;
 @property (strong, nonatomic) UIButton *photosButton;
+@property (strong, nonatomic) MBProgressHUD *hud;
 
 @end
 
@@ -38,18 +40,24 @@
 
 - (void)didUserButtonPress {
     TableViewController *vc = [[TableViewController alloc] init];
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[ParseManager sharedManager] getListOfUsersWithCompletitionBlock:^(NSArray *array, NSError *error) {
         vc.arrayOfObjects = [[NSArray alloc] initWithArray:array];
         vc.isPhotos = NO;
+        [self.hud hide:YES];
+        self.hud = nil;
         [self.navigationController pushViewController:vc animated:YES];
     }];
 }
 
 - (void)didPhotosButtonPress {
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     TableViewController *vc = [[TableViewController alloc] init];
     [[ParseManager sharedManager] getPhotosWithCompletitionBlock:^(NSArray *array, NSError *error) {
         vc.isPhotos = YES;
         vc.arrayOfObjects = [[NSArray alloc] initWithArray:array];
+        [self.hud hide:YES];
+        self.hud = nil;
         [self.navigationController pushViewController:vc animated:YES];
     }];
 }
