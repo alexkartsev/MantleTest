@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailView : UIScrollView
+@interface DetailViewForUser : UIScrollView
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *city;
 @property (strong, nonatomic) NSString *street;
 @property (strong, nonatomic) NSString *zipcode;
-@property (strong, nonatomic) UIImage *photo;
-@property (strong, nonatomic) NSURL *photoUrl;
 
 @end

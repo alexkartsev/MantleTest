@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		112364E81C3A643E00CE8F39 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 112364E71C3A643E00CE8F39 /* DetailView.m */; };
+		112364E81C3A643E00CE8F39 /* DetailViewForUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 112364E71C3A643E00CE8F39 /* DetailViewForUser.m */; };
 		117D10A91C32F5D60082295E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D10A81C32F5D60082295E /* main.m */; };
 		117D10AC1C32F5D60082295E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 117D10AB1C32F5D60082295E /* AppDelegate.m */; };
 		117D10B21C32F5D60082295E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117D10B01C32F5D60082295E /* Main.storyboard */; };
 		117D10B41C32F5D60082295E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117D10B31C32F5D60082295E /* Assets.xcassets */; };
 		117D10B71C32F5D60082295E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117D10B51C32F5D60082295E /* LaunchScreen.storyboard */; };
 		119CC8C01C3FBC6F00FAC30C /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 119CC8BF1C3FBC6F00FAC30C /* Address.m */; };
+		119CC8C41C3FEDE700FAC30C /* DetailViewForPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 119CC8C31C3FEDE700FAC30C /* DetailViewForPhoto.m */; };
 		11EC36311C33D4E100106F47 /* ParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC36301C33D4E100106F47 /* ParseManager.m */; };
 		11EC36351C33D98600106F47 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC36341C33D98600106F47 /* User.m */; };
 		11EC36381C33DA0E00106F47 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC36371C33DA0E00106F47 /* Photo.m */; };
@@ -25,8 +26,8 @@
 
 /* Begin PBXFileReference section */
 		05D15232915EDEF5566270CD /* libPods-MantleTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MantleTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		112364E61C3A643E00CE8F39 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
-		112364E71C3A643E00CE8F39 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
+		112364E61C3A643E00CE8F39 /* DetailViewForUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewForUser.h; sourceTree = "<group>"; };
+		112364E71C3A643E00CE8F39 /* DetailViewForUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewForUser.m; sourceTree = "<group>"; };
 		117D10A41C32F5D60082295E /* MantleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MantleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		117D10A81C32F5D60082295E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		117D10AA1C32F5D60082295E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,6 +38,8 @@
 		117D10B81C32F5D60082295E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		119CC8BE1C3FBC6F00FAC30C /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Address.h; path = Classes/Address.h; sourceTree = "<group>"; };
 		119CC8BF1C3FBC6F00FAC30C /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Address.m; path = Classes/Address.m; sourceTree = "<group>"; };
+		119CC8C21C3FEDE700FAC30C /* DetailViewForPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewForPhoto.h; sourceTree = "<group>"; };
+		119CC8C31C3FEDE700FAC30C /* DetailViewForPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewForPhoto.m; sourceTree = "<group>"; };
 		11EC362F1C33D4E100106F47 /* ParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseManager.h; path = Managers/ParseManager.h; sourceTree = "<group>"; };
 		11EC36301C33D4E100106F47 /* ParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseManager.m; path = Managers/ParseManager.m; sourceTree = "<group>"; };
 		11EC36331C33D98600106F47 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Classes/User.h; sourceTree = "<group>"; };
@@ -70,8 +73,10 @@
 			children = (
 				11EC36401C34263E00106F47 /* DetailViewController.h */,
 				11EC36411C34263E00106F47 /* DetailViewController.m */,
-				112364E61C3A643E00CE8F39 /* DetailView.h */,
-				112364E71C3A643E00CE8F39 /* DetailView.m */,
+				112364E61C3A643E00CE8F39 /* DetailViewForUser.h */,
+				112364E71C3A643E00CE8F39 /* DetailViewForUser.m */,
+				119CC8C21C3FEDE700FAC30C /* DetailViewForPhoto.h */,
+				119CC8C31C3FEDE700FAC30C /* DetailViewForPhoto.m */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -301,10 +306,11 @@
 			files = (
 				11EC36381C33DA0E00106F47 /* Photo.m in Sources */,
 				11EC36351C33D98600106F47 /* User.m in Sources */,
-				112364E81C3A643E00CE8F39 /* DetailView.m in Sources */,
+				112364E81C3A643E00CE8F39 /* DetailViewForUser.m in Sources */,
 				117D10AC1C32F5D60082295E /* AppDelegate.m in Sources */,
 				117D10A91C32F5D60082295E /* main.m in Sources */,
 				11EC36471C34263E00106F47 /* MainViewController.m in Sources */,
+				119CC8C41C3FEDE700FAC30C /* DetailViewForPhoto.m in Sources */,
 				11EC36311C33D4E100106F47 /* ParseManager.m in Sources */,
 				11EC36461C34263E00106F47 /* DetailViewController.m in Sources */,
 				119CC8C01C3FBC6F00FAC30C /* Address.m in Sources */,

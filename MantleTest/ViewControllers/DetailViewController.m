@@ -7,11 +7,10 @@
 //
 
 #import "DetailViewController.h"
-#import "DetailView.h"
+#import "DetailViewForUser.h"
+#import "DetailViewForPhoto.h"
 
 @interface DetailViewController ()
-
-@property (strong, nonatomic) DetailView *detailView;
 
 @end
 
@@ -19,19 +18,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.detailView = [[DetailView alloc] initWithFrame:self.view.bounds];
     if (self.user) {
-        self.detailView.title = self.user.name;
-        self.detailView.email = self.user.email;
-        self.detailView.city = self.user.address.city;
-        self.detailView.zipcode = self.user.address.zipcode;
-        self.detailView.street = self.user.address.street;
+        DetailViewForUser *detailViewForUser = [[DetailViewForUser alloc] initWithFrame:self.view.bounds];
+        detailViewForUser.title = self.user.name;
+        detailViewForUser.email = self.user.email;
+        detailViewForUser.city = self.user.address.city;
+        detailViewForUser.zipcode = self.user.address.zipcode;
+        detailViewForUser.street = self.user.address.street;
+        [self.view addSubview:detailViewForUser];
     }
     else if (self.photo) {
-        self.detailView.title = self.photo.title;
-        self.detailView.photoUrl = self.photo.imageURL;
+        DetailViewForPhoto *detailViewForPhoto = [[DetailViewForPhoto alloc] initWithFrame:self.view.bounds];
+        detailViewForPhoto.title = self.photo.title;
+        detailViewForPhoto.photoUrl = self.photo.imageURL;
+        [self.view addSubview:detailViewForPhoto];
     }
-    [self.view addSubview:self.detailView];
 }
 
 - (void)didReceiveMemoryWarning {
