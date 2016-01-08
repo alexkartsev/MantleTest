@@ -8,6 +8,7 @@ target 'MantleTest' do
 pod 'AFNetworking'
 pod 'MBProgressHUD'
 pod 'Mantle'
+pod 'SDWebImage'
 
 end
 

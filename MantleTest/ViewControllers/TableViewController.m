@@ -9,9 +9,10 @@
 #import "TableViewController.h"
 #import "User.h"
 #import "Photo.h"
-#import <AFNetworking.h>
-#import "UIImageView+AFNetworking.h"
+//#import <AFNetworking.h>
+//#import "UIImageView+AFNetworking.h"
 #import "DetailViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface TableViewController ()
 
@@ -50,16 +51,23 @@ static NSString *cellIdentifier = @"Cell";
         cell.imageView.image = nil;
         Photo *photo = [self.arrayOfObjects objectAtIndex:indexPath.row];
         cell.textLabel.text = photo.title;
-        NSURLRequest *request = [NSURLRequest requestWithURL:photo.imageURL];
-        __weak typeof(UITableViewCell) *weakCell = cell;
-        [cell.imageView setImageWithURLRequest:request
-                              placeholderImage:nil
-                                       success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
-                                               weakCell.imageView.image = image;
-                                               [weakCell setNeedsLayout];
-        }                              failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
-                                                NSLog(@"ERROR of loading image for cell");
-        }];
+        [cell.imageView sd_setImageWithURL:photo.imageURL
+                          placeholderImage:nil
+                                 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                     [cell setNeedsLayout];
+         }];
+        
+        
+//        NSURLRequest *request = [NSURLRequest requestWithURL:photo.imageURL];
+//        __weak typeof(UITableViewCell) *weakCell = cell;
+//        [cell.imageView setImageWithURLRequest:request
+//                              placeholderImage:nil
+//                                       success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+//                                               weakCell.imageView.image = image;
+//                                               [weakCell setNeedsLayout];
+//        }                              failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+//                                                NSLog(@"ERROR of loading image for cell");
+//        }];
     }
     else {
         User *user = [self.arrayOfObjects objectAtIndex:indexPath.row];
@@ -69,8 +77,8 @@ static NSString *cellIdentifier = @"Cell";
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    [cell.imageView cancelImageDownloadTask];
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [cell.imageView sd_cancelCurrentImageLoad];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

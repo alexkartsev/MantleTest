@@ -23,9 +23,9 @@
     if (self.user) {
         self.detailView.title = self.user.name;
         self.detailView.email = self.user.email;
-        self.detailView.city = [self.user.address valueForKey:@"city"];
-        self.detailView.zipcode = [self.user.address valueForKey:@"zipcode"];
-        self.detailView.street = [self.user.address valueForKey:@"street"];
+        self.detailView.city = self.user.address.city;
+        self.detailView.zipcode = self.user.address.zipcode;
+        self.detailView.street = self.user.address.street;
     }
     else if (self.photo) {
         self.detailView.title = self.photo.title;

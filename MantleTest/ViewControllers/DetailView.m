@@ -7,7 +7,8 @@
 //
 
 #import "DetailView.h"
-#import "UIImageView+AFNetworking.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+//#import "UIImageView+AFNetworking.h"
 
 @interface DetailView()
 
@@ -76,9 +77,15 @@
         if (self.photoUrl && !self.photoImageView) {
             self.photoImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.bounds.size.width/2-150, self.titleLabel.frame.origin.y+self.titleLabel.frame.size.height+20, 300, 300)];
             [self addSubview:self.photoImageView];
-            [self.photoImageView setImageWithURL:self.photoUrl placeholderImage:nil];
+            //[self.photoImageView setImageWithURL:self.photoUrl placeholderImage:nil];
+            [self.photoImageView sd_setImageWithURL:self.photoUrl];
         }
-        
+        if (self.zipcodeLabel && !self.photoImageView) {
+            self.contentSize = CGSizeMake(self.bounds.size.width, self.zipcodeLabel.frame.origin.y+self.zipcodeLabel.frame.size.height+20);
+        }
+        else if (self.photoImageView) {
+            self.contentSize = CGSizeMake(self.bounds.size.width, self.photoImageView.frame.origin.y+self.photoImageView.frame.size.height+20);
+        }
     }
 }
 

@@ -13,6 +13,7 @@
 		117D10B21C32F5D60082295E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117D10B01C32F5D60082295E /* Main.storyboard */; };
 		117D10B41C32F5D60082295E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117D10B31C32F5D60082295E /* Assets.xcassets */; };
 		117D10B71C32F5D60082295E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117D10B51C32F5D60082295E /* LaunchScreen.storyboard */; };
+		119CC8C01C3FBC6F00FAC30C /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 119CC8BF1C3FBC6F00FAC30C /* Address.m */; };
 		11EC36311C33D4E100106F47 /* ParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC36301C33D4E100106F47 /* ParseManager.m */; };
 		11EC36351C33D98600106F47 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC36341C33D98600106F47 /* User.m */; };
 		11EC36381C33DA0E00106F47 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EC36371C33DA0E00106F47 /* Photo.m */; };
@@ -34,6 +35,8 @@
 		117D10B31C32F5D60082295E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		117D10B61C32F5D60082295E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		117D10B81C32F5D60082295E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		119CC8BE1C3FBC6F00FAC30C /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Address.h; path = Classes/Address.h; sourceTree = "<group>"; };
+		119CC8BF1C3FBC6F00FAC30C /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Address.m; path = Classes/Address.m; sourceTree = "<group>"; };
 		11EC362F1C33D4E100106F47 /* ParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseManager.h; path = Managers/ParseManager.h; sourceTree = "<group>"; };
 		11EC36301C33D4E100106F47 /* ParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseManager.m; path = Managers/ParseManager.m; sourceTree = "<group>"; };
 		11EC36331C33D98600106F47 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Classes/User.h; sourceTree = "<group>"; };
@@ -116,6 +119,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		119CC8C11C3FBC7D00FAC30C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				11EC36331C33D98600106F47 /* User.h */,
+				11EC36341C33D98600106F47 /* User.m */,
+				119CC8BE1C3FBC6F00FAC30C /* Address.h */,
+				119CC8BF1C3FBC6F00FAC30C /* Address.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		11EC362E1C33D4B400106F47 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +142,7 @@
 		11EC36321C33D94600106F47 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				11EC36331C33D98600106F47 /* User.h */,
-				11EC36341C33D98600106F47 /* User.m */,
+				119CC8C11C3FBC7D00FAC30C /* User */,
 				11EC36361C33DA0E00106F47 /* Photo.h */,
 				11EC36371C33DA0E00106F47 /* Photo.m */,
 			);
@@ -294,6 +307,7 @@
 				11EC36471C34263E00106F47 /* MainViewController.m in Sources */,
 				11EC36311C33D4E100106F47 /* ParseManager.m in Sources */,
 				11EC36461C34263E00106F47 /* DetailViewController.m in Sources */,
+				119CC8C01C3FBC6F00FAC30C /* Address.m in Sources */,
 				11EC36481C34263E00106F47 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

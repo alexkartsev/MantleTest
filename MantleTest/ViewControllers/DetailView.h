@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailView : UIView
+@interface DetailView : UIScrollView
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *email;
