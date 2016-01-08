@@ -11,7 +11,6 @@
 @interface DetailViewForPhoto : UIScrollView
 
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) UIImage *photo;
 @property (strong, nonatomic) NSURL *photoUrl;
 
 @end
