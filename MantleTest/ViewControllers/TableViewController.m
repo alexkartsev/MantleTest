@@ -46,11 +46,8 @@ static NSString *cellIdentifier = @"Cell";
         }
     }
     
-    cell.imageView.image = nil;
-    cell.textLabel.text = nil;
-    cell.detailTextLabel.text = nil;
-    
     if (self.isPhotos) {
+        cell.imageView.image = nil;
         Photo *photo = [self.arrayOfObjects objectAtIndex:indexPath.row];
         cell.textLabel.text = photo.title;
         NSURLRequest *request = [NSURLRequest requestWithURL:photo.imageURL];
@@ -58,10 +55,10 @@ static NSString *cellIdentifier = @"Cell";
         [cell.imageView setImageWithURLRequest:request
                               placeholderImage:nil
                                        success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
-                                           weakCell.imageView.image = image;
-                                           [weakCell setNeedsLayout];
+                                               weakCell.imageView.image = image;
+                                               [weakCell setNeedsLayout];
         }                              failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
-                                            NSLog(@"ERROR of loading image for cell");
+                                                NSLog(@"ERROR of loading image for cell");
         }];
     }
     else {
